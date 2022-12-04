@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+
+:root{
+    --banner-height: 70px;
+    --nav-height: 60px;
+    --top-section: 140px;
+    --board-dimension: 600px;
+    --tile-dimension: 60px;
+    --accent-colour: rgb(196, 212, 235);
+    /*--accent-colour: rgb(211, 210, 218);*/
+}
+
+.hidden{
+    display: none;
+}
+
+*{
+    list-style: none;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.lb_section{
+    width: 300px;
+    height: 400px;
+    margin: 100px auto 0;
+    background: var(--accent-colour);
+    border-radius: 5px;
+    position: relative;
+}
+
+.lb_section ul{
+    display: flex;
+}
+
+.lb_section ul li{
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.lb_section ul li:hover{
+    color: white;
+    font-weight: 700;
+}
+
+.ib_tabs{
+    text-align: center;
+    align-items: center;
+}
+
+.lb_wrap{
+    background: white;
+    left: 20px;
+    width: 300px;
+    height: 400px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    background-image: url(https://americansuburbx.com/wp-content/uploads/2015/10/sugimoto_lake_superior.jpg);
+}
+
+header{
+    background-color: var(--accent-colour);
+    height: var(--banner-height);
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+nav{
+    height: var(--nav-height);
+    width: 100%;
+    text-align: center;
+    top: var(--banner-height);
+    padding-top: 20px;
+    position: absolute;
+}
+
+main{
+    position: absolute;
+    height: calc(100% - var(--top-section));
+    width: 100%;
+    top: var(--top-section);
+    text-align: center;
+}
+
+#leaderboard{
+    left: 0;
+    top:0;
+    width: 300px;
+    height: 100%;
+    position: absolute;
+}
+
+#tableheader{
+    position: absolute;
+}
+
+.send {
+    right: 0;
+    top: 100% - var(--top-section);
+    position: absolute;
+}
+
+#diff{
+    padding-bottom: 8px;
+}
+
+#start-btn {
+    background-color:var(--accent-colour);
+    cursor: pointer;
+}
+
+#send-btn {
+    background-color: white;
+    cursor: pointer;
+}
+
+#giveup-btn {
+    background-color: white;
+    cursor: pointer;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+}
+
+#numbers {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
+
+#numbers > p {
+    /* this refers to each p element individually */
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 5px 15px 5px;
+    /* controls ratio */
+    background: var(--accent-colour);
+    width: 40px;
+    height: 40px;
+    font-size: 20pt;
+    text-align: center;
+    cursor: pointer;
+}
+
+#numbers > p:hover {
+    background-color:cornflowerblue;
+}
+
+#board {
+   padding-top: 10px;
+   margin-top: 10px;
+   display: block;
+   justify-content: center;
+   align-content: flex-start;
+   /*entire board dimension*/
+   width: var(--board-dimension);
+   height: var(--board-dimension);
+   position: absolute;
+}
+
+/* .~ = class selector */
+.tile {
+    background-color: white;
+    border: 1px solid black;
+    width: var(--tile-dimension);
+    height: var(--tile-dimension);
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 20pt;
+    display:inline-block;
+}
+
+/* outlines blocks */
+.rightblockOutline {
+    border-right: 4px solid black;
+
+}
+
+.bottomblockOutline {
+    border-bottom: 4px solid black;
+
+}
+
+/* board colour changes for specified tiles */
+p.selected {
+    background-color: cornflowerblue;
+}
+
+p.incorrect {
+    background-color: red;
+}
+
+p.highlight {
+    background-color:lemonchiffon;
+}
+
+/*id selector*/
+#display{
+    padding-top: 20px;
+    font-size: 30pt;
+    width: 100%;
+    margin: 0px auto;
+}
+
+footer
+{
+    bottom: 0;
+    font-size: smaller;
+    position: fixed;
+}

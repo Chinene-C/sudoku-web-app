@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-gb">
+<meta charset="utf-8">
+<title>Sudoku</title>
+<link rel="stylesheet" href="default.css">
+<link rel="shortcut icon" href="sudoku.png">
+<!-- file browser picks up & runs -->
+<script type="module" src="main.js"></script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+</style>
+
+<header>
+    <h1>Sudoku</h1>
+</header>
+
+<nav>
+    <div id="diff">
+        <!-- "checked" means starts on this setting -->
+        <label><input id="diff-1" type="radio" name="diff" value= "easy" checked> Easy</label>
+        <label><input id="diff-2" type="radio" name="diff" value= "medium"> Medium</label>
+        <label><input id="diff-3" type="radio" name="diff" value= "hard"> Hard</label>
+    </div>
+    <button id="start-btn">Start New Game</button> 
+</nav>
+
+<main>
+    <section>
+        <div class="container">
+            <div id="display">
+                00:00:00
+            </div>
+        </div>
+    </section>
+    <button id="giveup-btn">Give Up</button>
+
+    <div id="send" class="hidden send">
+        <textarea id="username">Username...</textarea>
+        <button id="send-btn">Send</button>
+    </div>
+
+    <div id="leaderboard" class="hidden">
+            <div class="lb_section">
+                <h2>Leaderboard</h2>
+            <div class="lb_tabs">
+                <div class="tabs">
+                    <ul>
+                        <li data-li="easy">Easy</li>
+                        <li class="active" data-li="mediium">Medium</li>
+                        <li data-li="hard">Hard</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lb_wrap">
+                <ul id="lb_item easy"></ul>
+                <ul id="lb_item medium"></ul>
+                <ul id="lb_item hard"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="game">
+        <!-- board to be made in javascript -->
+        <div id="board" class ="sudokuBoard"></div>
+        <div id="numbers">
+            <p id="one">1</p>
+            <p id="two">2</p>
+            <p id="three">3</p>
+            <p id="four">4</p>
+            <p id="five">5</p>
+            <p id="six">6</p>
+            <p id="seven">7</p>
+            <p id="eight">8</p>
+            <p id="nine">9</p>
+        </div>
+    </div>
+</main>
+
+<footer>Chinene Chukwuma</footer>
+
